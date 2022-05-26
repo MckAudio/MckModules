@@ -1,0 +1,29 @@
+{
+  "slug": "MckModules",
+  "name": "MckAudio Modules",
+  "version": "2.0.0",
+  "license": "GPL-3.0-or-later",
+  "brand": "MckAudio",
+  "author": "Matt McKay",
+  "authorEmail": "",
+  "authorUrl": "",
+  "pluginUrl": "",
+  "manualUrl": "",
+  "sourceUrl": "",
+  "donateUrl": "",
+  "changelogUrl": "",
+  "modules": [
+    {
+      "slug": "MyModule",
+      "name": "MyModule",
+      "description": "",
+      "tags": []
+    },
+    {
+      "slug": "RectVCO",
+      "name": "RectVCO",
+      "description": "",
+      "tags": []
+    }
+  ]
+}
