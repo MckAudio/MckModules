@@ -4,13 +4,14 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${HOME}/apps/Rack/Rack-SDK/**"
+                "${HOME}/apps/Rack/Rack-SDK/**",
+                "${HOME}/Development/SDK/Rack-SDK/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/lib64/ccache/clang",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "linux-clang-x64"
+            "cppStandard": "c++11",
+            "intelliSenseMode": "linux-gcc-x64"
         }
     ],
     "version": 4
