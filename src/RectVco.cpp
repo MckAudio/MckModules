@@ -66,7 +66,7 @@ struct RectVCO : Module
 
 		configParam(MIX_PARAM, 0.0f, 1.0f, 0.5f, "OSC Mix", " %", 0.f, 100.0f);
 		configInput(MIX_CV_INPUT, "Mix CV");
-		configParam(MIX_CV_PARAM, -1.0f, 1.0f, 0.0f, "Mix CV amount", " %", 0.f, 100.0f);
+		configParam(MIX_CV_PARAM, -0.5f, 0.5f, 0.0f, "Mix CV amount", " %", 0.f, 200.0f);
 
 		configQuant(INTERVAL_PARAM, -12.0f, 12.0f, 0.0f, "Interval", " HT", 0.0f, 1.0f);
 		configInput(PITCH_INPUT, "");
@@ -106,8 +106,10 @@ struct RectVCO : Module
 
 		// OSC MIX
 		float mix = params[MIX_PARAM].getValue();
+		float mixCV = inputs[MIX_CV_INPUT].getVoltage() / 5.0f;
+		mixCV *= params[MIX_CV_PARAM].getValue();
 
-		mix = clamp(mix, 0.0f, 1.0f);
+		mix = clamp(mix + mixCV, 0.0f, 1.0f);
 
 		float sampRect = rect(phase, pw);
 		float sampSaw = saw(phase, pw);
