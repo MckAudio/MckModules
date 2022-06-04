@@ -9,6 +9,7 @@ extern Plugin* pluginInstance;
 
 extern Model* modelMyModule;
 extern Model* modelRectVCO;
+extern Model* modelDelay;
 
 // Declare each Model, defined in each module source file
 // extern Model* modelMyModule;

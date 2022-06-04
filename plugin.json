@@ -24,6 +24,15 @@
       "name": "RectVCO",
       "description": "",
       "tags": []
+    },
+    {
+      "slug": "Delay",
+      "name": "Delay",
+      "description": "",
+      "tags": [
+        "Delay",
+        "Effect"
+      ]
     }
   ]
 }

@@ -91,9 +91,14 @@ struct RectVCO : Module
 
 	void process(const ProcessArgs &args) override
 	{
+		float pitchCoeff = dsp::FREQ_C4 * std::pow(dsp::FREQ_SEMITONE, params[INTERVAL_PARAM].getValue());
+
+		//int channels = std::max(inputs[PITCH_INPUT].getChannels(), 1);
+		//for (int c = 0; c < channels; c += 4) {}
+
 		// PITCH
 		float pitch = inputs[PITCH_INPUT].getVoltage();
-		float freq = dsp::FREQ_C4 * std::pow(2.0f, pitch) * std::pow(dsp::FREQ_SEMITONE, params[INTERVAL_PARAM].getValue());
+		float freq = std::pow(2.0f, pitch) * pitchCoeff;
 		phase += freq * args.sampleTime;
 		if (phase >= 0.5f)
 			phase -= 1.0f;
